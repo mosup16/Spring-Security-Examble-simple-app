@@ -20,19 +20,7 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-//        List<GrantedAuthority> authorities = new LinkedList<>();
-//        for (ApplicationRole role: user.getRole()) {
-//            authorities.add(new SimpleGrantedAuthority(role));
-//        }
-//        for (ApplicationRole role : user.getRole()) {
-//            role.getGrantedAuthorities();
-//        }
-
         return user.getRole().getGrantedAuthoritiesList();
-
-//        List<GrantedAuthority> authorities = Arrays.stream(user.getRoles()).map(SimpleGrantedAuthority::new)
-//                .collect(Collectors.toList());
-//        return authorities;
     }
 
     @Override
