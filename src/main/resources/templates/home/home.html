@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome To Spring Security</title>
+</head>
+<body>
+<h1>Welcome </h1>
+<!--<h1 th:text="${principal.getUsername()}"></h1>-->
+<ul th:each="user:${usersList}">
+    <li th:text="${user.name}"></li>
+</ul>
+
+</body>
+</html>
